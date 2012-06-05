@@ -8,7 +8,7 @@ class easyinstall($package = 'python-setuptools', record_dir = '/var/lib/puppet/
    }
 
    if !defined(Package["$package"]) {
-      package { '$package':
+      package { "$package":
          ensure => 'installed',
          require => File["$record_dir"]
       }
