@@ -1,4 +1,4 @@
-class easyinstall($package = 'python-setuptools', record_dir = '/var/lib/puppet/easy_install') {
+class easyinstall($package = 'python-setuptools', $record_dir = '/var/lib/puppet/easy_install') {
 
    file { "$record_dir":
       ensure => 'directory',
