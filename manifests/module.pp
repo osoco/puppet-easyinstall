@@ -9,6 +9,7 @@ define easyinstall::module {
         require => Package["$easyinstall::package"],
         creates => "$mod_record",
         logoutput => on_failure,
+        path => '/usr/bin:/bin:/usr/sbin:/sbin',
     }
 
 }
